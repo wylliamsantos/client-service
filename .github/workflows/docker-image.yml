@@ -46,13 +46,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       
-      - name: Create tag
-        uses: actions/github-script@v5
+      - name: Tag snapshot
+        uses: tvdias/github-tagger@v0.0.1
         with:
-          script: |
-            github.rest.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: 'refs/tags/v${{ steps.meta.outputs.tags }}',
-              sha: context.sha
-            })
+          repo-token: ${{ secrets.TAG_TOKEN }}
+          tag: ${{ github.run_number }}
