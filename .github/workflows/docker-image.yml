@@ -41,10 +41,7 @@ jobs:
           context: .
           push: true
           tags: |
-            # branch event
             type=ref,event=branch
-            # tag event
             type=ref,event=tag
-            # pull request event
             type=ref,event=pr
           labels: ${{ steps.meta.outputs.labels }}
