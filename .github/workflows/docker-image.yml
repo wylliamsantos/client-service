@@ -36,8 +36,6 @@ jobs:
           images: wylliamsantos/client-service
           tags: |
             type=raw,value=1.0.${{ github.run_number }},priority=1000
-            type=ref,event=branch
-            type=sha
             type=raw,value=latest
 
       - name: Build and push Docker image
