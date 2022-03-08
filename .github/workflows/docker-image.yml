@@ -40,8 +40,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: |
-            type=ref,event=branch
-            type=ref,event=tag
-            type=ref,event=pr
+          flavor: |
+            latest=auto
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
