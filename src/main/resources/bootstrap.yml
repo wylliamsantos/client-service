@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://origination-mysql:3306/wvs?useTimezone=true&serverTimezone=UTC&nullNamePatternMatchesALl=true
+    username: wvs
+    password: wvs
+    hikari:
+      connectionTimeout: 30000
+      idleTimeout: 60000
+      maxLifetime: 120000
+      maximumPoolSize: 5
+      minimumIdle: 1
+  flyway:
+    url: jdbc:mysql://origination-mysql:3306/
+    schemas: wvs
+    user: root
+    password: admin123
