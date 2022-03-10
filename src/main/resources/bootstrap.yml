@@ -12,6 +12,9 @@ spring:
       maxLifetime: 120000
       maximumPoolSize: 5
       minimumIdle: 1
+  redis:
+    host: ${HOST:redis}
+    port: 6379
   flyway:
     url: jdbc:mysql://${HOST:origination-mysql}:3306/
     schemas: wvs
