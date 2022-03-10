@@ -13,7 +13,7 @@ spring:
       maximumPoolSize: 5
       minimumIdle: 1
   redis:
-    host: ${HOST:redis}
+    host: ${HOST:origination-redis}
     port: 6379
   flyway:
     url: jdbc:mysql://${HOST:origination-mysql}:3306/
