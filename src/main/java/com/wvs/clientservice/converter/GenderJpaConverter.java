@@ -22,7 +22,7 @@ public class GenderJpaConverter implements AttributeConverter<GenderType, String
             return null;
         }
         try {
-            return GenderType.valueOf(string);
+            return GenderType.get(string);
         } catch (IllegalArgumentException e) {
             return null;
         }
